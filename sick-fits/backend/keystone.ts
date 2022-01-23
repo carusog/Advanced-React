@@ -6,6 +6,7 @@ import {
 import { config, createSchema } from '@keystone-next/keystone/schema';
 import 'dotenv/config';
 import { User } from './schemas/User';
+import { Product } from './schemas/Product';
 
 const databaseURL =
   process.env.DATABASE_URL || 'mongodb://localhost/keystone-sick-fits-tutorial';
@@ -39,6 +40,7 @@ export default withAuth(
     lists: createSchema({
       // TODO: schema items to go here
       User,
+      Product,
     }),
     ui: {
       // TODO: change this for roles
